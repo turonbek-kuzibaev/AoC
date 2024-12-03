@@ -20,6 +20,7 @@ def main():
     for instr in instructions:
         if DO_REGEX.match(instr):
             enabled = True
+            
         elif DONT_REGEX.match(instr):
             enabled = False
         elif MULTIPLE_REGEX.match(instr) and enabled:
